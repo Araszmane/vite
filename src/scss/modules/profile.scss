@@ -1,0 +1,49 @@
+@use 'variables' as *;
+
+.profile {
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    line-height: 3em;
+    text-transform: uppercase;
+    margin: 0px;
+    width: auto;
+
+    &-image {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      padding: 20px;
+      float: left;
+      align-items: center;
+    }
+    &-border {
+      width: 100%;
+      max-width: 1000px;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      background-image: url(https://scontent-waw2-1.xx.fbcdn.net/v/t39.30808-6/242161175_2112851768870025_8094101720873715500_n.png?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=YQGGM9uRVZsQ7kNvgEjaP2y&_nc_ht=scontent-waw2-1.xx&oh=00_AYCQOmKS3LiQQcTYBDKIZESNRHgV4o6Hw2oKGooeRUiiuQ&oe=668219A2);
+      background-size: 100% 100%;
+      align-items: center;
+      object-fit: fill;
+    }
+    &-post {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+    }
+  }
+  &__text {
+    display: flex;
+    align-items: flex-end;
+    float: right;
+    flex-direction: column;
+    margin-right: 30px;
+    margin-top: 80px;
+  }
+}
