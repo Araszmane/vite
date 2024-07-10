@@ -1,0 +1,51 @@
+@use 'variables' as *;
+@use 'basic' as *;
+
+.skills {
+  margin: 40px 20px;
+
+  &__header {
+    @extend %header_type_1;
+  }
+
+  &__list {
+    margin: 20px;
+    padding: 0;
+    list-style: none;
+
+    &-item {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      z-index: 5;
+
+      &-label {
+        display: block;
+        width: 50%;
+      }
+
+      &-value {
+        border-radius: 1px;
+        display: block;
+        height: 3px;
+        text-indent: -9999px;
+        overflow: hidden;
+        background-color: $secondaryColor;
+        width: 50%
+      }
+
+      &:before {
+        position: absolute;
+        right: 0;
+        content: '';
+        display: block;
+        border-radius: 1px;
+        height: 3px;
+        width: 50%;
+        background-color: $fourthColor;
+        z-index: -1;
+      }
+    }
+  }
+}

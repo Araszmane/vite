@@ -1,0 +1,43 @@
+@use 'variables' as *;
+
+main {
+  background-color: $primaryColor;
+  max-width: 1000px;
+  width: 100%;
+  min-height: 100%;
+  
+
+  @media (min-width: $breakpoint) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+#basic-info {
+  display: flex;
+  flex-direction: column;
+  color: $secondaryColor;
+  
+
+  @media (min-width: $breakpoint) {
+    width: 100%;
+    height: 200px;
+    max-width: 1000px;
+
+    object-fit: contain;
+  }
+}
+
+#additional-info {
+  color: transparent;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+
+  @media (min-width: $breakpoint) {
+    width: 160%;
+    background-color: transparent;
+    color: $primaryColor;
+  }
+}

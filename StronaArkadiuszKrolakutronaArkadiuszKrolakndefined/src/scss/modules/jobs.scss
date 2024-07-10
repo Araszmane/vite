@@ -1,0 +1,54 @@
+@use "variables" as *;
+
+.jobs {
+  margin: 40px 20px;
+  border-radius: 5px;
+  padding: 5px;
+
+  &__header {
+    background-color: $fourthColor;
+    border-radius: 3px;
+
+  }
+
+  &__list {
+    margin: 0 0 0 5px;
+    padding: 0 0 0 15px;
+    list-style: none;
+    border-left: 2px solid $secondaryColor;
+    border-radius: 3px;
+
+    @media (min-width: $breakpoint) {
+      
+    }
+
+    &-item {
+      &-title {
+        color: $secondaryColor;
+        background-color: $fourthColor;
+        border-radius: 3px;
+      }
+
+      &-desc {
+        color: $secondaryColor;
+        background-color: $fourthColor;
+        border-radius: 3px;
+      }
+
+      &:before {
+        margin: 20px 0 0 -21px;
+        position: absolute;
+        background: $secondaryColor;
+
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+
+        @media (min-width: $breakpoint) {
+          background-color: $primaryColor;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+@use 'variables' as *;
+
+.menu {
+  z-index: 1000;
+  width: 99.5%;
+  max-width: 100%;
+  border-radius: 5px;
+  background-color: $ternanyColor;
+  color: $secondaryColor;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid $secondaryColor;
+
+  &__header {
+    margin: 0;
+    padding: 0;
+
+    a {
+      color: $secondaryColor;
+      text-decoration: none;
+
+      @media (min-width: $breakpoint) {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    &-button {
+      padding: 0;
+      border: 0;
+      position: relative;
+      display: block;
+      width: 48px;
+      height: 48px;
+      text-indent: -9999px;
+      overflow: hidden;
+      background-color: $secondaryColor;
+
+      &:after {
+        content: '';
+        position: absolute;
+        background-image: url("/img/icons/menu.svg");
+        background-size: 28px 28px;
+        background-repeat: no-repeat;
+        height: 28px;
+        width: 28px;
+        display: block;
+        top: 10px;
+        left: 10px;
+      }
+
+      &--active {
+        &:after {
+          background-image: url("/img/icons/close.svg");
+        }
+      }
+
+      @media (min-width: $breakpoint) {
+        display: none;
+      }
+    }
+
+    &-list {
+      display: none;
+      position: absolute;
+      left: 0;
+      list-style: none;
+      padding: 0;
+      margin: 11px 0 0 0;
+      width: 100%;
+      background-color: black;
+      color: white;
+
+      @media (min-width: $breakpoint) {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        margin: 0;
+      }
+
+      &--active {
+        display: block;
+      }
+
+      &-item {
+        border-bottom: 1px solid white;
+        min-height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: $breakpoint) {
+          border: none;
+        }
+
+        a {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          color: white;
+          padding: 10px;
+          text-decoration: none;
+          height: 100%;
+          width: 100%;
+
+          @media (min-width: $breakpoint) {
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          &:after {
+            content: '>';
+
+            @media (min-width: $breakpoint) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

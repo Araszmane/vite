@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello Vite!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="src/scss/main.scss">
+  </head>
+  <body>
+
+    <script type="module" src="/src/js/main.js"></script>
+
+  <div class="menu">
+    <h1 class="menu__header">
+      <a href="/" title="Go back to home page">
+        Facelook
+      </a>
+    </h1>
+    <nav class="menu__nav">
+      <button class="menu__nav-button" id="js-toggle-menu">Menu</button>
+      <ol class="menu__nav-list" id="js-menu">
+        <li class="menu__nav-list-item">
+          <a href="#contact" title="Go to contact">
+            Contact
+          </a>
+        </li>
+        <li class="menu__nav-list-item">
+          <a href="#jobs" title="Go to job history">
+            Posts
+          </a>
+        </li>
+      </ol>
+    </nav>
+  </div>
+  <div id="basic-info">
+    <div class="profile__header">
+      <img class="profile__header-border" src="/img/background-image.png">
+    </div>
+  </div>
+
+  <main>
+    <div id="basic-info">
+
+        <div>
+          <h1>
+            <img class="profile__header-image" src="/img/cover-image.jpg">
+          </h1>
+          <div class="profile__text">
+            <h1>Kaliop Polaska</h1>
+          </div>
+        </div>
+
+      <section id="contact" class="contact">
+        <header class="contact__header">
+          <h1>Contact</h1>
+          <p>Dostawca rozwiązań IT dla biznesu. 20 lat doświadczeń na rynku, setki zrealizowanych projektów.</p>
+        </header>
+
+        <address class="contact__address">
+          <ul class="contact__address-list">
+            <li class="contact__address-list-item">
+              <span>e-mail:</span> <a href="mailto:arcadiusking.pc@gmail.com" title="Send e-mail">biuro@kaliop.pl</a>
+            </li>
+            <li class="contact__address-list-item">
+              <span>mobile</span>: <a href="tel:+48598413714" title="Make a call">+48 598413714</a>
+            </li>
+            <li class="contact__address-list-item">
+              <span>address:</span>
+              <a href="https://maps.app.goo.gl/yPdEoR6sdsUYJLjs5" title="See on Google Maps" target="_blank">
+                ul.Portowa 13, 76-200 Słupsk
+              </a>
+            </li>
+            <li class="contact__address-list-item">
+              <span>Website</span>: <a href="https://www.kaliop.com/pl/" title="Website">kaliop.pl</a>
+            </li>
+          </ul>
+        </address>
+      </section>
+    </div>
+
+    <div id="additional-info">
+      <section id="jobs" class="jobs">
+        <header class="jobs__header">
+          <h1>Posts</h1>
+        </header>
+
+        <ul class="jobs__list">
+          <li class="jobs__list-item">
+            <h2 class="jobs__list-item-title">
+              <span>Post</span><br>
+            </h2>
+            <p class="jobs__list-item-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolorem dolores est et ipsum quia rem saepe totam ut voluptates? Eos expedita fugit neque non perspiciatis reprehenderit sed vel voluptatem?
+              <img class="profile__header-post" src="/img/post.jpg">
+            </p>
+
+          </li>
+          <li class="jobs__list-item">
+            <h2 class="jobs__list-item-title">Post</h2>
+            <p class="jobs__list-item-desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dolorem dolores est et ipsum quia rem saepe totam ut voluptates? Eos expedita fugit neque non perspiciatis reprehenderit sed vel voluptatem?
+              <img class="profile__header-post" src="/img/post2.jpg">
+            </p>
+
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  </body>
+</html>
